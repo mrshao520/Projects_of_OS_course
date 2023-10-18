@@ -29,5 +29,5 @@ int main(int argc, char *argv[])
 
     my_grep.match_from_directory();
 
-    return 1;
+    return MyGrep::EXIT_SUCCESS_CODE;
 }

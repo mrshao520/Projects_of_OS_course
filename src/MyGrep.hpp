@@ -77,7 +77,7 @@ private:
     bool file_;                  // -f 查找的文件
     bool directory_;             // -d 查找的目录
     bool recurrence_;            // -r 递归查找子目录中的文件
-    std::string compare_string_; // -s
+    std::string compare_string_; // -s 匹配的字符串
 
     /* 最后一个 h 或 H 才会生效，h 和 H 互斥 */
     bool without_filename_; // -h 在显示符合样式的那一行之前，不标示该行所属的文件名称。

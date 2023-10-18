@@ -190,15 +190,15 @@ void MyGrep::show_usage(EXIT_CODE status)
 {
         if (status != EXIT_CODE::EXIT_SUCCESS_CODE)
         {
-                std::cout << "Usage: MyGrep [OPTION]... PATTERNS -s [MATCH STRING] -f [FILE] -d [DIRECTORY]..." << std::endl;
+                std::cout << "Usage: MyGrep [OPTION]... -s [PATTERNS] -f [FILE] -d [DIRECTORY]..." << std::endl;
                 std::cout << "Try 'MyGrep --help' for more information." << std::endl;
         }
         else
         {
-                std::cout << "Usage: MyGrep [OPTION]... PATTERNS -s [MATCH STRIGN] -f [FILE] -d [DIRECTORY]..." << std::endl;
+                std::cout << "Usage: MyGrep [OPTION]... -s [PATTERNS] -f [FILE] -d [DIRECTORY]..." << std::endl;
                 std::cout << "Search for PATTERNS in each FILE." << std::endl;
                 printf("\
-Example: MyGrep -i 'hello world' menu.h main.c\n\
+Example: MyGrep -i -s 'hello world' menu.h main.c\n\
 PATTERNS can contain multiple patterns separated by newlines.\n\
 \n\
 Pattern selection and interpretation:\n\
@@ -214,7 +214,7 @@ Pattern selection and interpretation:\n\
 \n\
 Miscellaneous:\n\
         -V, --version    显示版本号\n\
-        --help       显示帮助文档\n");
+            --help       显示帮助文档\n");
         }
 
         exit(status);
